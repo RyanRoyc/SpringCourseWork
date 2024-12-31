@@ -16,12 +16,12 @@ public class EmployeeDAOJpaImpl implements EmployeeDAO{
 
     // set up constructor injection
     @Autowired
-    public EmployeeJpaImpl(EntityManager theEntityManager){
+    public EmployeeDAOJpaImpl(EntityManager theEntityManager){
         entityManager = theEntityManager;
     }
 
     @Override
-    public List<Employee> findall() {
+    public List<Employee> findAll() {
 
         // create a query
         TypedQuery<Employee> theQuery = entityManager.createQuery("from Employee", Employee.class);
